@@ -7,8 +7,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class SelectApp {
-	public static void main(String[] args) throws ClassNotFoundException,
-	SQLException {
+	public static void main(String[] args) throws ClassNotFoundException,SQLException {
 
 	// Step2. Establish the Connection
 	String url = "jdbc:mysql:///sept";
