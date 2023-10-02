@@ -12,7 +12,6 @@ import jdbcconcept1.JDBCUtility;
 public class HandlingDate {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		//Resources used
 				Connection connection = null;
 				PreparedStatement pstmt = null;
@@ -29,7 +28,7 @@ public class HandlingDate {
 				try {
 					connection = JDBCUtility.getJdbcConnection();
 
-					String sqlInsertQuery = "insert into users values(?,?,?)";
+					String sqlInsertQuery = "insert into users(`name`,`dob`,`dom`) values(?,?,?)";
 					if (connection != null)
 						pstmt = connection.prepareStatement(sqlInsertQuery);
 
@@ -71,10 +70,8 @@ public class HandlingDate {
 
 					}
 
-				} 
-				catch (SQLException | IOException e) {
+				} catch (SQLException | IOException e) {
 					e.printStackTrace();
-					
 				} catch (ParseException e) {
 					e.printStackTrace();
 				} catch (Exception e) {
